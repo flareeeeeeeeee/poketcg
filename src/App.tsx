@@ -11,7 +11,7 @@ function App() {
   const fetchData = async () => {
     try {
       setLoading(true)
-      axios.defaults.baseURL = 'http://myurl';
+      axios.defaults.baseURL = 'https://poketcg-delta.vercel.app/';
       axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
       axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
       const response = await axios.get("https://www.pokemon.com/us/play-pokemon/leaderboards/op/api/tcg-master/?leaderboard_type=championship&per_page=10&page=1&format=json&zone=GT")
